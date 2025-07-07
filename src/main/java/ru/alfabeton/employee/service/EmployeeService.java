@@ -1,7 +1,8 @@
 package ru.alfabeton.employee.service;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import ru.alfabeton.employee.dto.EmployeeDto;
-import ru.alfabeton.employee.entity.Employee;
 
 import java.util.List;
 
@@ -15,4 +16,6 @@ public interface EmployeeService {
     EmployeeDto update(Long id, EmployeeDto employeeDto);
 
     void delete(Long id);
+
+    Page<EmployeeDto> findAllPaged(Pageable pageable);
 }
